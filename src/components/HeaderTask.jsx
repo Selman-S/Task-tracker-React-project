@@ -1,17 +1,30 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import AddTask from './AddTask'
 
-const HeaderTask = () => {
+const HeaderTask = ({tasks,setTasks}) => {
   const [show, setShow] = useState(true);
-  const handleShowClick = () => {
-    setShow(!show);
+  const [btn, setBtn] = useState({
+    bgColor:'red',
+    desc:'Close Add Task Bar'
+  });
+
+  const handleShowClick = () => { 
+    if (show) {
+      setBtn({bgColor:'purple',desc:'Show Add Task Bar'})
+    } else {
+      setBtn({
+        bgColor:'red',
+        desc:'Close Add Task Bar'
+      })
+    }
+   setShow(!show);
   }
-  console.log(show)
+  
   return (
     <div className="header">
       <h2>Task Tracker</h2>
-      <button onClick={handleShowClick}>Show Add Task Bar</button>
-      {show && <AddTask /> }
+      <button style={{backgroundColor:btn.bgColor}} onClick={handleShowClick}>{btn.desc}</button>
+      {show && <AddTask tasks={tasks} setTasks={setTasks} /> }
       
     </div>
   )
