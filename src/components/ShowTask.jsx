@@ -1,9 +1,42 @@
 import React from 'react'
+import { GrClose } from 'react-icons/gr'
 
-const ShowTask = () => {
+const ShowTask = ({ tasks }) => {
+  console.log(tasks)
   return (
     <div>
-      <h1>ShowTask</h1>
+      <div className="tasks">
+        <div className="tasks-list">
+          <div className="task-item">
+            <div className="task-desc">
+              <h2 className="task-title">deneme</h2>
+              <p className="task-date">Dec 13th, 2014</p>
+            </div>
+
+            <div className="task-close">
+              <GrClose />
+            </div>
+          </div>   <div className="task-item">
+            <div className="task-desc">
+              <h2 className="task-title">deneme</h2>
+              <p className="task-date">Dec 13th, 2014</p>
+            </div>
+
+            <div className="task-close">
+              <GrClose />
+            </div>
+          </div>   <div className="task-item">
+            <div className="task-desc">
+              <h2 className="task-title">deneme</h2>
+              <p className="task-date">Dec 13th, 2014</p>
+            </div>
+
+            <div className="task-close">
+              <GrClose />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

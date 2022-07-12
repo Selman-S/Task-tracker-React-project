@@ -64,3 +64,31 @@
 button {
   cursor: pointer;
 }
+
+.tasks {
+  text-align-last: left;
+  margin: 1rem 1.5rem;
+}
+.task-item {
+  border:2px solid purple;
+  border-radius: 8px;
+  position: relative;
+  padding: 0.3rem .4rem;
+  margin:  0.5rem 0;
+
+}
+.task-item h2{
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.task-close {
+  position: absolute;
+  right: 10px;
+  font-size: 1.5rem;
+  top: 10px;
+  cursor: pointer;
+}
+.task-desc {
+  cursor: pointer;
+  display: inline-block;
+}
