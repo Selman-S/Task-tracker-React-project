@@ -6,11 +6,19 @@ const ShowTask = ({ tasks ,setTasks}) => {
 
 
   const delTask = (task)=> {
-    const delT = tasks.filter((e)=> !(e.id==task.id))
+    const delT = tasks.filter((e)=> !(e.id===task.id))
     setTasks(delT)
-    
-   
   }
+  const crossOut = (task) => {
+ 
+      var newTask = {...task,isDone: !task.isDone}
+  
+     setTasks([...(tasks.filter((e)=> !(e.id===task.id))),newTask])
+
+   
+  }  
+   
+
   return (
     <div>
       <div className="tasks">
@@ -18,7 +26,8 @@ const ShowTask = ({ tasks ,setTasks}) => {
           {tasks.map((task) => {
             return (
               <div key={task.id} className="task-item">
-                <div className="task-desc">
+                <div style={{textDecoration: task.isDone?'line-through':'none'}} 
+                 onClick={()=> crossOut(task)} className="task-desc">
                   <h2 className="task-title">{task.task}</h2>
                   <p className="task-date">{task.date}</p>
                 </div>
