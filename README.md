@@ -12,7 +12,7 @@
 
 <br>
 
-[Clik Me]([https://selman-task-tracker-react.netlify.app/])
+[Clik Me](https://selman-task-tracker-react.netlify.app/)
 
 <br>
 
