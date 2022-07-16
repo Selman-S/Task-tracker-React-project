@@ -22,9 +22,6 @@
  * useState
  * useEffect
  * localestorrage
- * react-router-dom
- * react-bootsrap
- * styled-components
 
 
  
